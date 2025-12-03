@@ -3,6 +3,7 @@ use std::{env::args, fmt::Display};
 mod util;
 mod day1;
 mod day2;
+mod day3;
 
 fn usage() {
     println!("Usage: cargo run <DAY>");
@@ -21,6 +22,7 @@ fn main() {
     match day.as_str() {
         "1" => run(day1::part1, day1::part2, &data),
         "2" => run(day2::part1, day2::part2, &data),
+        "3" => run(day3::part1, day3::part2, &data),
         _ => usage(),
     }
 }
