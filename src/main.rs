@@ -5,6 +5,7 @@ mod day1;
 mod day2;
 mod day3;
 mod day4;
+mod day5;
 
 fn usage() {
     println!("Usage: cargo run <DAY>");
@@ -25,6 +26,7 @@ fn main() {
         "2" => run(day2::part1, day2::part2, &data),
         "3" => run(day3::part1, day3::part2, &data),
         "4" => run(day4::part1, day4::part2, &data),
+        "5" => run(day5::part1, day5::part2, &data),
         _ => usage(),
     }
 }
