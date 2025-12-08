@@ -1,3 +1,5 @@
+use crate::util::Point;
+
 pub fn part1(data: &str) -> usize {
     let grid = Grid::from(data);
 
@@ -48,44 +50,6 @@ pub fn part2(data: &str) -> usize {
         points_to_remove.iter().for_each(|p| grid.set(p, '.'));
     }
     count
-}
-
-struct Point {
-    x: i32,
-    y: i32,
-}
-
-impl Point {
-    fn from(x: usize, y: usize) -> Self {
-        Point {
-            x: x as i32,
-            y: y as i32,
-        }
-    }
-    fn up(&self) -> Self {
-        Point {
-            x: self.x,
-            y: self.y - 1,
-        }
-    }
-    fn down(&self) -> Self {
-        Point {
-            x: self.x,
-            y: self.y + 1,
-        }
-    }
-    fn left(&self) -> Self {
-        Point {
-            x: self.x - 1,
-            y: self.y,
-        }
-    }
-    fn right(&self) -> Self {
-        Point {
-            x: self.x + 1,
-            y: self.y,
-        }
-    }
 }
 
 struct Grid {
