@@ -6,3 +6,4 @@ default-run = "aoc2025"
 readme = "README.md"
 
 [dependencies]
+i_overlay = "4.1.1"
